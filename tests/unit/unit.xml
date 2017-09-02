@@ -1,0 +1,33 @@
+<testsuites name="unit">
+  <testsuite name="Unit Tests for Commons util functions Testing ProfessionsStore" tests="1" errors="0" failures="0" skipped="0" timestamp="2017-09-02T13:51:50" time="0.005">
+    <testcase classname="unit.Unit Tests for Commons util functions Testing ProfessionsStore" name="Should return the same instance even if it is invoked multiple times since it implements a singleton model" time="0.001">
+      <system-out><![CDATA[First hit!!!!
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Tests for Commons util functions Testing getRandomIntegerInRange" tests="1" errors="0" failures="0" skipped="0" timestamp="2017-09-02T13:51:50" time="0.001">
+    <testcase classname="unit.Unit Tests for Commons util functions Testing getRandomIntegerInRange" name="Should return a random integer in specified range which also ensures that it inclusive of min and inclusive of max" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Tests for Commons util functions Testing returnRandomProfessions" tests="1" errors="0" failures="0" skipped="0" timestamp="2017-09-02T13:51:50" time="0.001">
+    <testcase classname="unit.Unit Tests for Commons util functions Testing returnRandomProfessions" name="Should return a random list of professions of length n from the professions corpus" time="0">
+      <system-out><![CDATA[n = 5
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Tests for Commons util functions Testing returnListOfProfessionsForEachPlayerWithRepeatations" tests="1" errors="0" failures="0" skipped="0" timestamp="2017-09-02T13:51:50" time="0">
+    <testcase classname="unit.Unit Tests for Commons util functions Testing returnListOfProfessionsForEachPlayerWithRepeatations" name="Should return a list of professions in sets of 3 for each player" time="0">
+      <system-out><![CDATA[n = 5
+Players = 10
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Tests for Commons util functions Testing returnListOfProfessionsForEachPlayerWithoutRepeatations" tests="1" errors="0" failures="1" skipped="0" timestamp="2017-09-02T13:51:50" time="0.006">
+    <testcase classname="unit.Unit Tests for Commons util functions Testing returnListOfProfessionsForEachPlayerWithoutRepeatations" name="Should return a list of professions in sets of 3 for each player and all professions must be unique" time="0.003">
+      <failure message="expected 0 to be 1"></failure>
+      <system-out><![CDATA[n = 5
+Players = 10
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

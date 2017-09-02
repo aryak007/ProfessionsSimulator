@@ -1,0 +1,32 @@
+{
+  "name": "carthage",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "gulp": "gulp",
+    "unit": "JUNIT_REPORT_NAME=unit JUNIT_REPORT_PATH=./tests/unit/unit.xml mocha tests/unit/test --colors --reporter mocha-jenkins-reporter",
+    "system": "JUNIT_REPORT_NAME=unit JUNIT_REPORT_PATH=./tests/system/system.xml mocha tests/system/test --colors --reporter mocha-jenkins-reporter"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.13.3",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.13.3",
+    "formidable": "^1.1.1",
+    "mocha-jenkins-reporter": "^0.3.9",
+    "morgan": "^1.6.1",
+    "should": "^11.2.1"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-nodemon": "^2.0.2",
+    "gulp-plumber": "^1.0.0",
+    "mocha": "^3.0.2",
+    "nyc": "^10.0.0",
+    "request": "^2.81.0"
+  }
+}

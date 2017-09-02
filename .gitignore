@@ -1,0 +1,4 @@
+node_modules
+test/unit/*.xml
+test/system/*.xml
+.vscode/
