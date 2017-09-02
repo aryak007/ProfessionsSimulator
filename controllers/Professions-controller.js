@@ -7,7 +7,7 @@ function getProfessionsWithoutRepetitions(req, res) {
     var numOfProfs = req.query.professions;
     var numOfPlayers = req.query.players;
     if (numOfProfs < (numOfPlayers * 3)) {
-        res.status(400).send("Repeations are allowed since number of professions = " + numOfProfs + " is less than number of players (" + numOfPlayers + " x 3). \nYou may want to try the endpoint /api/getProfessionsWithRepeatations \n\nSee <a href = \"\">README.md</a> for details");
+        res.status(400).send("Repeations are allowed since number of professions = " + numOfProfs + " is less than number of players (" + numOfPlayers + " x 3). \nYou may want to try the endpoint /api/getProfessionsWithRepetitions \n\nSee \"https://github.com/aryak93/ProfessionsSimulator#list-of-available-apis\" for details about the APIs");
         console.log("Repeations are allowed since number of professions = " + numOfProfs + " is less than number of players (" + numOfPlayers + " x 3)");
     }
     else {
