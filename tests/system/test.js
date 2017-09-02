@@ -24,9 +24,7 @@ describe('System tests for Professions-controller', function () {
                 res.statusCode.should.be.equal(200);
                 body.forEach(function (playerInfo) {
                     playerInfo.professions.forEach(function (prof) {
-                        console.log(prof)
                         if (prof in map) {
-                            console.log(prof)
                             count++;
                         }
                         else {
