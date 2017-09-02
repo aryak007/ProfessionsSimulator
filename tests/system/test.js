@@ -8,7 +8,7 @@ var professionsController = require('../../controllers/Professions-controller')
 describe('System tests for Professions-controller', function () {
     describe('Testing API /getProfessionsWithoutRepeatations', function () {
         it('Should return 400 status code if number of professions is less than number of players number of players x 3', (done) => {
-            Util.requestManager('http://localhost:3000/api/getProfessionsWithoutRepeatations?professions=15&players=10', function (res,body) {
+            Util.requestManager('http://localhost:3000/api/getProfessionsWithoutRepetitions?professions=15&players=10', function (res,body) {
                 res.statusCode.should.be.equal(400);
                 done();
             })
@@ -18,7 +18,7 @@ describe('System tests for Professions-controller', function () {
     describe('Testing API /getProfessionsWithoutRepeatations', function () {
         it('Should return a list of professions which are also unique', (done) => {
 
-            Util.requestManager("http://localhost:3000/api/getProfessionsWithoutRepeatations?professions=30&players=10", function (res,body) {
+            Util.requestManager("http://localhost:3000/api/getProfessionsWithoutRepetitions?professions=30&players=10", function (res,body) {
                 var count = 0;
                 var map = {}
                 res.statusCode.should.be.equal(200);
@@ -43,7 +43,7 @@ describe('System tests for Professions-controller', function () {
 
     describe('Testing API /getProfessionsWithRepeatations', function () {
         it('Should return a list of professions which are also unique', (done) => {
-            Util.requestManager("http://localhost:3000/api/getProfessionsWithRepeatations?professions=15&players=10", function (res,body) {
+            Util.requestManager("http://localhost:3000/api/getProfessionsWithRepetitions?professions=15&players=10", function (res,body) {
                 res.statusCode.should.be.equal(200);
                 body.length.should.be.equal(10)
                 done();
@@ -53,7 +53,7 @@ describe('System tests for Professions-controller', function () {
 
     describe('Testing API /getProfessionsWithRepeatations', function () {
         it('Should return a list of professions for every player', (done) => {
-            Util.requestManager("http://localhost:3000/api/getProfessionsWithRepeatations?professions=15&players=10", function (res,body) {
+            Util.requestManager("http://localhost:3000/api/getProfessionsWithRepetitions?professions=15&players=10", function (res,body) {
                 res.statusCode.should.be.equal(200);
                 body.length.should.be.equal(10)
                 done();

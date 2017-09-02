@@ -5,12 +5,12 @@ const profController = require('./controllers/Professions-controller.js')
 
 
 //Primary routes
-router.route('/getProfessionsWithRepeatations')
-    .get(profController.getProfessionsWithRepeatations)
+router.route('/getProfessionsWithRepetitions')
+    .get(profController.getProfessionsWithRepetitions)
 
 
-router.route('/getProfessionsWithoutRepeatations')
-    .get(profController.getProfessionsWithoutRepeatations)
+router.route('/getProfessionsWithoutRepetitions')
+    .get(profController.getProfessionsWithoutRepetitions)
 
 //Other fun routes
 router.route('/getRandomProfessions/:professions')

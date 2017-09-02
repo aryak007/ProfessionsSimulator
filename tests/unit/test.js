@@ -38,7 +38,7 @@ describe('Unit Tests for Commons util functions', function () {
             var players = 10;
             var profsData = Commons.ProfessionsStore.getInstance();
             var randomlyChosenProfs = Commons.returnRandomProfessions(n,profsData)
-            var listOfProfs = Commons.returnListOfProfessionsForEachPlayerWithRepeatations(randomlyChosenProfs,players)
+            var listOfProfs = Commons.returnListOfProfessionsForEachPlayerWithRepetitions(randomlyChosenProfs,players)
             assert.equal(listOfProfs.length,players)
         })
     })
@@ -53,7 +53,7 @@ describe('Unit Tests for Commons util functions', function () {
             var map = {}
             var profsData = Commons.ProfessionsStore.getInstance();
             var randomlyChosenProfs = Commons.returnRandomProfessions(n,profsData)
-            var listOfProfs = Commons.returnListOfProfessionsForEachPlayerWithoutRepeatations(randomlyChosenProfs,players)
+            var listOfProfs = Commons.returnListOfProfessionsForEachPlayerWithoutRepetitions(randomlyChosenProfs,players)
             listOfProfs.forEach(function(playerInfo) {
                 playerInfo.professions.forEach(function(prof){
                     if(prof in map)

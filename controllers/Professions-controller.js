@@ -2,8 +2,8 @@
 var Commons = require('../util/Commons.js')
 
 
-/*Eg API - /api/getProfessionsWithoutRepeatations/professions=30&players=10 */
-function getProfessionsWithoutRepeatations(req, res) {
+/*Eg API - /api/getProfessionsWithoutRepetitions/professions=30&players=10 */
+function getProfessionsWithoutRepetitions(req, res) {
     var numOfProfs = req.query.professions;
     var numOfPlayers = req.query.players;
     if (numOfProfs < (numOfPlayers * 3)) {
@@ -20,14 +20,14 @@ function getProfessionsWithoutRepeatations(req, res) {
         var obj = {}
         var i = 0
         randomlyChosenProfs = Commons.returnRandomProfessions(numOfProfs, professionsData)
-        resultData = Commons.returnListOfProfessionsForEachPlayerWithoutRepeatations(randomlyChosenProfs, numOfPlayers)
+        resultData = Commons.returnListOfProfessionsForEachPlayerWithoutRepetitions(randomlyChosenProfs, numOfPlayers)
         res.json(resultData)
     }
 
 }
 
-/* Eg API - /api/getProfessionsWithoutRepeatations/professions=15&players=10 */
-function getProfessionsWithRepeatations(req, res) {
+/* Eg API - /api/getProfessionsWithoutRepetitions/professions=15&players=10 */
+function getProfessionsWithRepetitions(req, res) {
     var numOfProfs = req.query.professions;
     var numOfPlayers = req.query.players;
     var randomlyChosenProfs = []
@@ -40,7 +40,7 @@ function getProfessionsWithRepeatations(req, res) {
     var obj = {}
     var i = 0
     randomlyChosenProfs = Commons.returnRandomProfessions(numOfProfs, professionsData)
-    resultData = Commons.returnListOfProfessionsForEachPlayerWithRepeatations(randomlyChosenProfs, numOfPlayers)
+    resultData = Commons.returnListOfProfessionsForEachPlayerWithRepetitions(randomlyChosenProfs, numOfPlayers)
     res.json(resultData)
 
 }
@@ -76,8 +76,8 @@ function fetchListOfRandomIntsWithinRange(req, res) {
 
 
 module.exports = {
-    getProfessionsWithoutRepeatations: getProfessionsWithoutRepeatations,
-    getProfessionsWithRepeatations: getProfessionsWithRepeatations,
+    getProfessionsWithoutRepetitions: getProfessionsWithoutRepetitions,
+    getProfessionsWithRepetitions: getProfessionsWithRepetitions,
     fetchRandomProfessions: fetchRandomProfessions,
     totalProfsInProfessionsCorpus: totalProfsInProfessionsCorpus,
     fetchListOfRandomIntsWithinRange: fetchListOfRandomIntsWithinRange

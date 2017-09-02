@@ -36,7 +36,7 @@ function returnRandomProfessions(numOfProfs,professionsData){
     return randomlyChosenProfs
 }
 
-function returnListOfProfessionsForEachPlayerWithRepeatations(randomlyChosenProfs,numOfPlayers){
+function returnListOfProfessionsForEachPlayerWithRepetitions(randomlyChosenProfs,numOfPlayers){
     var resultData = []
     var resultForEachPlayer = []
     var obj = {}
@@ -56,7 +56,7 @@ function returnListOfProfessionsForEachPlayerWithRepeatations(randomlyChosenProf
     return resultData 
 }
 
-function returnListOfProfessionsForEachPlayerWithoutRepeatations(randomlyChosenProfs,numOfPlayers){
+function returnListOfProfessionsForEachPlayerWithoutRepetitions(randomlyChosenProfs,numOfPlayers){
     var resultData = []
     var resultForEachPlayer = []
     var obj = {}
@@ -91,6 +91,6 @@ module.exports = {
     ProfessionsStore:ProfessionsStore,
     getRandomIntegerInRange:getRandomIntegerInRange,
     returnRandomProfessions:returnRandomProfessions,
-    returnListOfProfessionsForEachPlayerWithRepeatations:returnListOfProfessionsForEachPlayerWithRepeatations,
-    returnListOfProfessionsForEachPlayerWithoutRepeatations:returnListOfProfessionsForEachPlayerWithoutRepeatations
+    returnListOfProfessionsForEachPlayerWithRepetitions:returnListOfProfessionsForEachPlayerWithRepetitions,
+    returnListOfProfessionsForEachPlayerWithoutRepetitions:returnListOfProfessionsForEachPlayerWithoutRepetitions
 }
