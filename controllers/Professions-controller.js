@@ -48,7 +48,10 @@ function getProfessionsWithRepetitions(req, res) {
 /*Eg API - /api/getRandomProfessions/20 */
 function fetchRandomProfessions(req, res) {
     var professionsData = Commons.ProfessionsStore.getInstance();
-    var randomlyChosenProfs = Commons.returnRandomProfessions(req.params.professions, professionsData)
+    var numOfProfs = req.params.professions
+    if(numOfProfs>professionsData.length)
+        res.send("Number of professions must be less than "+professionsData.length)
+    var randomlyChosenProfs = Commons.returnRandomProfessions(numOfProfs, professionsData)
     res.send(randomlyChosenProfs)
 }
 
