@@ -1,4 +1,4 @@
 node_modules
-test/unit/*.xml
-test/system/*.xml
+tests/unit/*.xml
+tests/system/*.xml
 .vscode/
